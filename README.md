@@ -2,13 +2,13 @@
 
 # 电子课程设计--交通灯
 
-> 3020234442 李波 自动化5班
+> https://github.com/AmorFati-coder/traffic-vhdl
 
 ## 设计任务及要求
 
-![image-20220818084323912](assets/image-20220818084323912.png)
+![image-20220818084323912](traffic-vhdl.assets/image-20220818084323912.png)
 
-![image-20220818084410437](assets/image-20220818084410437.png)
+![image-20220818084410437](traffic-vhdl.assets/image-20220818084410437.png)
 
 ## 设计方案
 
@@ -16,13 +16,13 @@
 
 - 状态转换图
 
-![image-20220828131402216](assets/image-20220828131402216.png)
+![image-20220828131402216](traffic-vhdl.assets/image-20220828131402216.png)
 
 - 方案设计
 
   选用模式3
 
-  ![img](assets/clip_image002.png)
+  ![img](traffic-vhdl.assets/clip_image002.png)
 
   ```vhdl
   ENTITY traffic IS
@@ -146,7 +146,7 @@
 
 ## 软件仿真
 
-![image-20220828143707674](assets/image-20220828143707674.png)
+![image-20220828143707674](traffic-vhdl.assets/image-20220828143707674.png)
 
 ```vhdl
 library IEEE;--库文件
@@ -288,7 +288,7 @@ END ARCHITECTURE bhv;
   | 0      | 0      | 1      | 1      | 0      | 0      |
   | 1      | 0      | 0      | 0      | 1      | 0      |
 
-![image-20220828140742917](assets/image-20220828140742917.png)
+![image-20220828140742917](traffic-vhdl.assets/image-20220828140742917.png)
 
 ​		$S2->S3$
 
@@ -299,7 +299,7 @@ END ARCHITECTURE bhv;
 
 最后$S3-S0$循环下去
 
-![image-20220828141416650](assets/image-20220828141416650.png)
+![image-20220828141416650](traffic-vhdl.assets/image-20220828141416650.png)
 
 - $RST='1'\quad SWI='0'$
 
@@ -309,13 +309,13 @@ END ARCHITECTURE bhv;
 
   一直是$S0$状态
 
-![image-20220828142139014](assets/image-20220828142139014.png)
+![image-20220828142139014](traffic-vhdl.assets/image-20220828142139014.png)
 
 - $RST='0'\quad SWI='1'$
 
   $SWI='1'时，状态转换停止，计数器停止计数$
 
-  ![image-20220828142826356](assets/image-20220828142826356.png)
+  ![image-20220828142826356](traffic-vhdl.assets/image-20220828142826356.png)
 
 ## 调试中的问题
 
