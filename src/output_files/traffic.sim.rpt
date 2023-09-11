@@ -1,0 +1,616 @@
+Simulator report for traffic
+Sun Aug 28 14:27:16 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 426 nodes    ;
+; Simulation Coverage         ;      93.66 % ;
+; Total Number of Transitions ; 83060        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                           ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                         ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                      ; Timing        ;
+; Start time                                                                                 ; 0 ns                                            ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                             ;               ;
+; Vector input source                                                                        ; C:/Users/Administrator/Desktop/trd/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                              ; On            ;
+; Check outputs                                                                              ; Off                                             ; Off           ;
+; Report simulation coverage                                                                 ; On                                              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                              ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                              ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                              ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                             ; Off           ;
+; Detect glitches                                                                            ; Off                                             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                             ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                             ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                            ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                       ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                       ; Transport     ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      93.66 % ;
+; Total nodes checked                                 ; 426          ;
+; Total output ports checked                          ; 426          ;
+; Total output ports with complete 1/0-value coverage ; 399          ;
+; Total output ports with no 1/0-value coverage       ; 26           ;
+; Total output ports with no 1-value coverage         ; 26           ;
+; Total output ports with no 0-value coverage         ; 27           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |traffic|COUNT68~1         ; |traffic|COUNT68~1         ; out              ;
+; |traffic|COUNT68~2         ; |traffic|COUNT68~2         ; out              ;
+; |traffic|COUNT68~3         ; |traffic|COUNT68~3         ; out              ;
+; |traffic|COUNT68~4         ; |traffic|COUNT68~4         ; out              ;
+; |traffic|COUNT68~5         ; |traffic|COUNT68~5         ; out              ;
+; |traffic|COUNT68~6         ; |traffic|COUNT68~6         ; out              ;
+; |traffic|COUNT68~7         ; |traffic|COUNT68~7         ; out              ;
+; |traffic|COUNT68[6]        ; |traffic|COUNT68[6]        ; regout           ;
+; |traffic|COUNT68[5]        ; |traffic|COUNT68[5]        ; regout           ;
+; |traffic|COUNT68[4]        ; |traffic|COUNT68[4]        ; regout           ;
+; |traffic|COUNT68[3]        ; |traffic|COUNT68[3]        ; regout           ;
+; |traffic|COUNT68[2]        ; |traffic|COUNT68[2]        ; regout           ;
+; |traffic|COUNT68[1]        ; |traffic|COUNT68[1]        ; regout           ;
+; |traffic|COUNT68[0]        ; |traffic|COUNT68[0]        ; regout           ;
+; |traffic|current_s.S0      ; |traffic|current_s.S0      ; regout           ;
+; |traffic|current_s.S1      ; |traffic|current_s.S1      ; regout           ;
+; |traffic|current_s.S2      ; |traffic|current_s.S2      ; regout           ;
+; |traffic|next_s.S3_464     ; |traffic|next_s.S3_464     ; out              ;
+; |traffic|WideSEGH[3]$latch ; |traffic|WideSEGH[3]$latch ; out              ;
+; |traffic|WideSEGH[2]$latch ; |traffic|WideSEGH[2]$latch ; out              ;
+; |traffic|WideSEGH[1]$latch ; |traffic|WideSEGH[1]$latch ; out              ;
+; |traffic|WideSEGH[0]$latch ; |traffic|WideSEGH[0]$latch ; out              ;
+; |traffic|WideSEGL[3]$latch ; |traffic|WideSEGL[3]$latch ; out              ;
+; |traffic|WideSEGL[2]$latch ; |traffic|WideSEGL[2]$latch ; out              ;
+; |traffic|WideSEGL[1]$latch ; |traffic|WideSEGL[1]$latch ; out              ;
+; |traffic|WideSEGL[0]$latch ; |traffic|WideSEGL[0]$latch ; out              ;
+; |traffic|LED~0             ; |traffic|LED~0             ; out0             ;
+; |traffic|NSEGH[3]$latch    ; |traffic|NSEGH[3]$latch    ; out              ;
+; |traffic|LED~1             ; |traffic|LED~1             ; out              ;
+; |traffic|NSEGH[2]$latch    ; |traffic|NSEGH[2]$latch    ; out              ;
+; |traffic|LED~2             ; |traffic|LED~2             ; out              ;
+; |traffic|WESEG~0           ; |traffic|WESEG~0           ; out              ;
+; |traffic|WESEG~1           ; |traffic|WESEG~1           ; out              ;
+; |traffic|WESEG~2           ; |traffic|WESEG~2           ; out              ;
+; |traffic|WESEG~3           ; |traffic|WESEG~3           ; out              ;
+; |traffic|WESEG~4           ; |traffic|WESEG~4           ; out              ;
+; |traffic|WESEG~5           ; |traffic|WESEG~5           ; out              ;
+; |traffic|WESEG~6           ; |traffic|WESEG~6           ; out              ;
+; |traffic|WESEG~7           ; |traffic|WESEG~7           ; out              ;
+; |traffic|WESEG~8           ; |traffic|WESEG~8           ; out              ;
+; |traffic|WESEG~9           ; |traffic|WESEG~9           ; out              ;
+; |traffic|WESEG~10          ; |traffic|WESEG~10          ; out              ;
+; |traffic|WESEG~11          ; |traffic|WESEG~11          ; out              ;
+; |traffic|WESEG~12          ; |traffic|WESEG~12          ; out              ;
+; |traffic|WESEG~13          ; |traffic|WESEG~13          ; out              ;
+; |traffic|WESEG~14          ; |traffic|WESEG~14          ; out              ;
+; |traffic|WESEG~15          ; |traffic|WESEG~15          ; out              ;
+; |traffic|WESEG~16          ; |traffic|WESEG~16          ; out              ;
+; |traffic|WESEG~17          ; |traffic|WESEG~17          ; out              ;
+; |traffic|WESEG~18          ; |traffic|WESEG~18          ; out              ;
+; |traffic|WESEG~19          ; |traffic|WESEG~19          ; out              ;
+; |traffic|WESEG~20          ; |traffic|WESEG~20          ; out              ;
+; |traffic|WESEG~21          ; |traffic|WESEG~21          ; out              ;
+; |traffic|WESEG~22          ; |traffic|WESEG~22          ; out              ;
+; |traffic|WESEG~23          ; |traffic|WESEG~23          ; out              ;
+; |traffic|WESEG~24          ; |traffic|WESEG~24          ; out              ;
+; |traffic|WESEG~25          ; |traffic|WESEG~25          ; out              ;
+; |traffic|WESEG~26          ; |traffic|WESEG~26          ; out              ;
+; |traffic|WESEG~27          ; |traffic|WESEG~27          ; out              ;
+; |traffic|NSSEG~0           ; |traffic|NSSEG~0           ; out              ;
+; |traffic|NSSEG~1           ; |traffic|NSSEG~1           ; out              ;
+; |traffic|NSSEG~2           ; |traffic|NSSEG~2           ; out              ;
+; |traffic|NSSEG~3           ; |traffic|NSSEG~3           ; out              ;
+; |traffic|NSSEG~4           ; |traffic|NSSEG~4           ; out              ;
+; |traffic|NSSEG~5           ; |traffic|NSSEG~5           ; out              ;
+; |traffic|NSSEG~6           ; |traffic|NSSEG~6           ; out              ;
+; |traffic|NSSEG~7           ; |traffic|NSSEG~7           ; out              ;
+; |traffic|NSSEG~8           ; |traffic|NSSEG~8           ; out              ;
+; |traffic|NSSEG~9           ; |traffic|NSSEG~9           ; out              ;
+; |traffic|NSSEG~10          ; |traffic|NSSEG~10          ; out              ;
+; |traffic|NSSEG~11          ; |traffic|NSSEG~11          ; out              ;
+; |traffic|NSSEG~12          ; |traffic|NSSEG~12          ; out              ;
+; |traffic|NSSEG~13          ; |traffic|NSSEG~13          ; out              ;
+; |traffic|NSSEG~14          ; |traffic|NSSEG~14          ; out              ;
+; |traffic|NSSEG~15          ; |traffic|NSSEG~15          ; out              ;
+; |traffic|NSSEG~16          ; |traffic|NSSEG~16          ; out              ;
+; |traffic|NSSEG~17          ; |traffic|NSSEG~17          ; out              ;
+; |traffic|NSSEG~18          ; |traffic|NSSEG~18          ; out              ;
+; |traffic|NSSEG~19          ; |traffic|NSSEG~19          ; out              ;
+; |traffic|NSSEG~20          ; |traffic|NSSEG~20          ; out              ;
+; |traffic|NSSEG~21          ; |traffic|NSSEG~21          ; out              ;
+; |traffic|NSSEG~22          ; |traffic|NSSEG~22          ; out              ;
+; |traffic|NSSEG~23          ; |traffic|NSSEG~23          ; out              ;
+; |traffic|NSSEG~24          ; |traffic|NSSEG~24          ; out              ;
+; |traffic|NSSEG~25          ; |traffic|NSSEG~25          ; out              ;
+; |traffic|NSSEG~26          ; |traffic|NSSEG~26          ; out              ;
+; |traffic|NSSEG~27          ; |traffic|NSSEG~27          ; out              ;
+; |traffic|NSEGH[1]$latch    ; |traffic|NSEGH[1]$latch    ; out              ;
+; |traffic|NSEGH[0]$latch    ; |traffic|NSEGH[0]$latch    ; out              ;
+; |traffic|NSEGL[3]$latch    ; |traffic|NSEGL[3]$latch    ; out              ;
+; |traffic|NSEGL[2]$latch    ; |traffic|NSEGL[2]$latch    ; out              ;
+; |traffic|NSEGL[1]$latch    ; |traffic|NSEGL[1]$latch    ; out              ;
+; |traffic|NSEGL[0]$latch    ; |traffic|NSEGL[0]$latch    ; out              ;
+; |traffic|next_s.S1_476     ; |traffic|next_s.S1_476     ; out              ;
+; |traffic|next_s.S0_482     ; |traffic|next_s.S0_482     ; out              ;
+; |traffic|LED[0]$latch      ; |traffic|LED[0]$latch      ; out              ;
+; |traffic|LED[1]$latch      ; |traffic|LED[1]$latch      ; out              ;
+; |traffic|LED[2]$latch      ; |traffic|LED[2]$latch      ; out              ;
+; |traffic|LED[3]$latch      ; |traffic|LED[3]$latch      ; out              ;
+; |traffic|LED[4]$latch      ; |traffic|LED[4]$latch      ; out              ;
+; |traffic|LED[5]$latch      ; |traffic|LED[5]$latch      ; out              ;
+; |traffic|current_s.S3      ; |traffic|current_s.S3      ; regout           ;
+; |traffic|next_s.S2_470     ; |traffic|next_s.S2_470     ; out              ;
+; |traffic|CLK               ; |traffic|CLK               ; out              ;
+; |traffic|LED[0]            ; |traffic|LED[0]            ; pin_out          ;
+; |traffic|LED[1]            ; |traffic|LED[1]            ; pin_out          ;
+; |traffic|LED[2]            ; |traffic|LED[2]            ; pin_out          ;
+; |traffic|LED[3]            ; |traffic|LED[3]            ; pin_out          ;
+; |traffic|LED[4]            ; |traffic|LED[4]            ; pin_out          ;
+; |traffic|LED[5]            ; |traffic|LED[5]            ; pin_out          ;
+; |traffic|WideSEGH[0]       ; |traffic|WideSEGH[0]       ; pin_out          ;
+; |traffic|WideSEGH[1]       ; |traffic|WideSEGH[1]       ; pin_out          ;
+; |traffic|WideSEGH[2]       ; |traffic|WideSEGH[2]       ; pin_out          ;
+; |traffic|WideSEGH[3]       ; |traffic|WideSEGH[3]       ; pin_out          ;
+; |traffic|WideSEGL[0]       ; |traffic|WideSEGL[0]       ; pin_out          ;
+; |traffic|WideSEGL[1]       ; |traffic|WideSEGL[1]       ; pin_out          ;
+; |traffic|WideSEGL[2]       ; |traffic|WideSEGL[2]       ; pin_out          ;
+; |traffic|WideSEGL[3]       ; |traffic|WideSEGL[3]       ; pin_out          ;
+; |traffic|NSEGH[0]          ; |traffic|NSEGH[0]          ; pin_out          ;
+; |traffic|NSEGH[1]          ; |traffic|NSEGH[1]          ; pin_out          ;
+; |traffic|NSEGH[2]          ; |traffic|NSEGH[2]          ; pin_out          ;
+; |traffic|NSEGH[3]          ; |traffic|NSEGH[3]          ; pin_out          ;
+; |traffic|NSEGL[0]          ; |traffic|NSEGL[0]          ; pin_out          ;
+; |traffic|NSEGL[1]          ; |traffic|NSEGL[1]          ; pin_out          ;
+; |traffic|NSEGL[2]          ; |traffic|NSEGL[2]          ; pin_out          ;
+; |traffic|NSEGL[3]          ; |traffic|NSEGL[3]          ; pin_out          ;
+; |traffic|current_s~0       ; |traffic|current_s~0       ; out0             ;
+; |traffic|current_s.S0~0    ; |traffic|current_s.S0~0    ; out0             ;
+; |traffic|LED~4             ; |traffic|LED~4             ; out0             ;
+; |traffic|current_s.S1~0    ; |traffic|current_s.S1~0    ; out0             ;
+; |traffic|LED~6             ; |traffic|LED~6             ; out0             ;
+; |traffic|current_s.S2~0    ; |traffic|current_s.S2~0    ; out0             ;
+; |traffic|Selector0~0       ; |traffic|Selector0~0       ; out0             ;
+; |traffic|current_s.S3~0    ; |traffic|current_s.S3~0    ; out0             ;
+; |traffic|LED~8             ; |traffic|LED~8             ; out0             ;
+; |traffic|current_s~5       ; |traffic|current_s~5       ; out0             ;
+; |traffic|Selector0~1       ; |traffic|Selector0~1       ; out0             ;
+; |traffic|Selector0~2       ; |traffic|Selector0~2       ; out0             ;
+; |traffic|Selector0~5       ; |traffic|Selector0~5       ; out0             ;
+; |traffic|Selector1~0       ; |traffic|Selector1~0       ; out0             ;
+; |traffic|Selector1~1       ; |traffic|Selector1~1       ; out0             ;
+; |traffic|Selector1~4       ; |traffic|Selector1~4       ; out0             ;
+; |traffic|Selector2~0       ; |traffic|Selector2~0       ; out0             ;
+; |traffic|Selector2~1       ; |traffic|Selector2~1       ; out0             ;
+; |traffic|Selector2~4       ; |traffic|Selector2~4       ; out0             ;
+; |traffic|Selector3~0       ; |traffic|Selector3~0       ; out0             ;
+; |traffic|Selector3~2       ; |traffic|Selector3~2       ; out0             ;
+; |traffic|Selector3~4       ; |traffic|Selector3~4       ; out0             ;
+; |traffic|Selector4~0       ; |traffic|Selector4~0       ; out0             ;
+; |traffic|Selector4~2       ; |traffic|Selector4~2       ; out0             ;
+; |traffic|Selector4~4       ; |traffic|Selector4~4       ; out0             ;
+; |traffic|Selector5~0       ; |traffic|Selector5~0       ; out0             ;
+; |traffic|Selector5~2       ; |traffic|Selector5~2       ; out0             ;
+; |traffic|Selector5~3       ; |traffic|Selector5~3       ; out0             ;
+; |traffic|Selector5~4       ; |traffic|Selector5~4       ; out0             ;
+; |traffic|Selector6~0       ; |traffic|Selector6~0       ; out0             ;
+; |traffic|Selector6~1       ; |traffic|Selector6~1       ; out0             ;
+; |traffic|Selector6~4       ; |traffic|Selector6~4       ; out0             ;
+; |traffic|Selector7~0       ; |traffic|Selector7~0       ; out0             ;
+; |traffic|Selector7~1       ; |traffic|Selector7~1       ; out0             ;
+; |traffic|Selector7~2       ; |traffic|Selector7~2       ; out0             ;
+; |traffic|Selector7~4       ; |traffic|Selector7~4       ; out0             ;
+; |traffic|Selector8~0       ; |traffic|Selector8~0       ; out0             ;
+; |traffic|Selector8~1       ; |traffic|Selector8~1       ; out0             ;
+; |traffic|Selector8~2       ; |traffic|Selector8~2       ; out0             ;
+; |traffic|Selector8~4       ; |traffic|Selector8~4       ; out0             ;
+; |traffic|Selector9~0       ; |traffic|Selector9~0       ; out0             ;
+; |traffic|Selector9~2       ; |traffic|Selector9~2       ; out0             ;
+; |traffic|Selector9~4       ; |traffic|Selector9~4       ; out0             ;
+; |traffic|Selector10~0      ; |traffic|Selector10~0      ; out0             ;
+; |traffic|Selector10~2      ; |traffic|Selector10~2      ; out0             ;
+; |traffic|Selector10~4      ; |traffic|Selector10~4      ; out0             ;
+; |traffic|Selector11~0      ; |traffic|Selector11~0      ; out0             ;
+; |traffic|Selector11~2      ; |traffic|Selector11~2      ; out0             ;
+; |traffic|Selector11~3      ; |traffic|Selector11~3      ; out0             ;
+; |traffic|Selector11~4      ; |traffic|Selector11~4      ; out0             ;
+; |traffic|Selector12~0      ; |traffic|Selector12~0      ; out0             ;
+; |traffic|Selector12~1      ; |traffic|Selector12~1      ; out0             ;
+; |traffic|Selector12~2      ; |traffic|Selector12~2      ; out0             ;
+; |traffic|Selector13~0      ; |traffic|Selector13~0      ; out0             ;
+; |traffic|Selector13~1      ; |traffic|Selector13~1      ; out0             ;
+; |traffic|Selector13~2      ; |traffic|Selector13~2      ; out0             ;
+; |traffic|Selector14~0      ; |traffic|Selector14~0      ; out0             ;
+; |traffic|Selector14~1      ; |traffic|Selector14~1      ; out0             ;
+; |traffic|Selector14~2      ; |traffic|Selector14~2      ; out0             ;
+; |traffic|Selector15~0      ; |traffic|Selector15~0      ; out0             ;
+; |traffic|Selector15~1      ; |traffic|Selector15~1      ; out0             ;
+; |traffic|Selector15~2      ; |traffic|Selector15~2      ; out0             ;
+; |traffic|LessThan0~0       ; |traffic|LessThan0~0       ; out0             ;
+; |traffic|LessThan0~1       ; |traffic|LessThan0~1       ; out0             ;
+; |traffic|LessThan0~2       ; |traffic|LessThan0~2       ; out0             ;
+; |traffic|LessThan0~3       ; |traffic|LessThan0~3       ; out0             ;
+; |traffic|LessThan0~4       ; |traffic|LessThan0~4       ; out0             ;
+; |traffic|LessThan0~5       ; |traffic|LessThan0~5       ; out0             ;
+; |traffic|LessThan0~6       ; |traffic|LessThan0~6       ; out0             ;
+; |traffic|LessThan0~7       ; |traffic|LessThan0~7       ; out0             ;
+; |traffic|LessThan0~8       ; |traffic|LessThan0~8       ; out0             ;
+; |traffic|LessThan1~0       ; |traffic|LessThan1~0       ; out0             ;
+; |traffic|LessThan1~1       ; |traffic|LessThan1~1       ; out0             ;
+; |traffic|LessThan1~2       ; |traffic|LessThan1~2       ; out0             ;
+; |traffic|LessThan1~3       ; |traffic|LessThan1~3       ; out0             ;
+; |traffic|LessThan1~4       ; |traffic|LessThan1~4       ; out0             ;
+; |traffic|LessThan1~5       ; |traffic|LessThan1~5       ; out0             ;
+; |traffic|LessThan2~0       ; |traffic|LessThan2~0       ; out0             ;
+; |traffic|LessThan2~1       ; |traffic|LessThan2~1       ; out0             ;
+; |traffic|LessThan2~2       ; |traffic|LessThan2~2       ; out0             ;
+; |traffic|LessThan2~3       ; |traffic|LessThan2~3       ; out0             ;
+; |traffic|LessThan2~4       ; |traffic|LessThan2~4       ; out0             ;
+; |traffic|LessThan2~5       ; |traffic|LessThan2~5       ; out0             ;
+; |traffic|LessThan2~6       ; |traffic|LessThan2~6       ; out0             ;
+; |traffic|LessThan2~7       ; |traffic|LessThan2~7       ; out0             ;
+; |traffic|LessThan2~8       ; |traffic|LessThan2~8       ; out0             ;
+; |traffic|LessThan3~0       ; |traffic|LessThan3~0       ; out0             ;
+; |traffic|LessThan3~1       ; |traffic|LessThan3~1       ; out0             ;
+; |traffic|LessThan3~2       ; |traffic|LessThan3~2       ; out0             ;
+; |traffic|LessThan3~3       ; |traffic|LessThan3~3       ; out0             ;
+; |traffic|LessThan3~4       ; |traffic|LessThan3~4       ; out0             ;
+; |traffic|LessThan3~5       ; |traffic|LessThan3~5       ; out0             ;
+; |traffic|LessThan3~6       ; |traffic|LessThan3~6       ; out0             ;
+; |traffic|LessThan3~7       ; |traffic|LessThan3~7       ; out0             ;
+; |traffic|LessThan3~8       ; |traffic|LessThan3~8       ; out0             ;
+; |traffic|LessThan4~0       ; |traffic|LessThan4~0       ; out0             ;
+; |traffic|LessThan4~1       ; |traffic|LessThan4~1       ; out0             ;
+; |traffic|LessThan4~2       ; |traffic|LessThan4~2       ; out0             ;
+; |traffic|LessThan4~3       ; |traffic|LessThan4~3       ; out0             ;
+; |traffic|LessThan4~4       ; |traffic|LessThan4~4       ; out0             ;
+; |traffic|LessThan4~5       ; |traffic|LessThan4~5       ; out0             ;
+; |traffic|LessThan4~6       ; |traffic|LessThan4~6       ; out0             ;
+; |traffic|LessThan4~7       ; |traffic|LessThan4~7       ; out0             ;
+; |traffic|LessThan4~8       ; |traffic|LessThan4~8       ; out0             ;
+; |traffic|LessThan4~9       ; |traffic|LessThan4~9       ; out0             ;
+; |traffic|LessThan4~10      ; |traffic|LessThan4~10      ; out0             ;
+; |traffic|LessThan5~0       ; |traffic|LessThan5~0       ; out0             ;
+; |traffic|LessThan5~1       ; |traffic|LessThan5~1       ; out0             ;
+; |traffic|LessThan5~2       ; |traffic|LessThan5~2       ; out0             ;
+; |traffic|LessThan5~3       ; |traffic|LessThan5~3       ; out0             ;
+; |traffic|LessThan5~4       ; |traffic|LessThan5~4       ; out0             ;
+; |traffic|LessThan5~5       ; |traffic|LessThan5~5       ; out0             ;
+; |traffic|LessThan5~6       ; |traffic|LessThan5~6       ; out0             ;
+; |traffic|LessThan6~0       ; |traffic|LessThan6~0       ; out0             ;
+; |traffic|LessThan6~1       ; |traffic|LessThan6~1       ; out0             ;
+; |traffic|LessThan6~2       ; |traffic|LessThan6~2       ; out0             ;
+; |traffic|LessThan6~3       ; |traffic|LessThan6~3       ; out0             ;
+; |traffic|LessThan6~4       ; |traffic|LessThan6~4       ; out0             ;
+; |traffic|LessThan6~5       ; |traffic|LessThan6~5       ; out0             ;
+; |traffic|LessThan6~6       ; |traffic|LessThan6~6       ; out0             ;
+; |traffic|LessThan6~7       ; |traffic|LessThan6~7       ; out0             ;
+; |traffic|LessThan6~8       ; |traffic|LessThan6~8       ; out0             ;
+; |traffic|LessThan7~0       ; |traffic|LessThan7~0       ; out0             ;
+; |traffic|LessThan7~1       ; |traffic|LessThan7~1       ; out0             ;
+; |traffic|LessThan7~2       ; |traffic|LessThan7~2       ; out0             ;
+; |traffic|LessThan7~3       ; |traffic|LessThan7~3       ; out0             ;
+; |traffic|LessThan7~4       ; |traffic|LessThan7~4       ; out0             ;
+; |traffic|LessThan7~5       ; |traffic|LessThan7~5       ; out0             ;
+; |traffic|LessThan7~6       ; |traffic|LessThan7~6       ; out0             ;
+; |traffic|LessThan7~7       ; |traffic|LessThan7~7       ; out0             ;
+; |traffic|LessThan7~8       ; |traffic|LessThan7~8       ; out0             ;
+; |traffic|LessThan8~0       ; |traffic|LessThan8~0       ; out0             ;
+; |traffic|LessThan8~1       ; |traffic|LessThan8~1       ; out0             ;
+; |traffic|LessThan8~2       ; |traffic|LessThan8~2       ; out0             ;
+; |traffic|LessThan8~3       ; |traffic|LessThan8~3       ; out0             ;
+; |traffic|LessThan8~4       ; |traffic|LessThan8~4       ; out0             ;
+; |traffic|LessThan8~5       ; |traffic|LessThan8~5       ; out0             ;
+; |traffic|LessThan8~6       ; |traffic|LessThan8~6       ; out0             ;
+; |traffic|LessThan8~7       ; |traffic|LessThan8~7       ; out0             ;
+; |traffic|LessThan8~8       ; |traffic|LessThan8~8       ; out0             ;
+; |traffic|LessThan8~9       ; |traffic|LessThan8~9       ; out0             ;
+; |traffic|LessThan8~10      ; |traffic|LessThan8~10      ; out0             ;
+; |traffic|Add0~0            ; |traffic|Add0~0            ; out0             ;
+; |traffic|Add0~1            ; |traffic|Add0~1            ; out0             ;
+; |traffic|Add0~2            ; |traffic|Add0~2            ; out0             ;
+; |traffic|Add0~3            ; |traffic|Add0~3            ; out0             ;
+; |traffic|Add0~4            ; |traffic|Add0~4            ; out0             ;
+; |traffic|Add0~5            ; |traffic|Add0~5            ; out0             ;
+; |traffic|Add0~6            ; |traffic|Add0~6            ; out0             ;
+; |traffic|Add0~7            ; |traffic|Add0~7            ; out0             ;
+; |traffic|Add0~8            ; |traffic|Add0~8            ; out0             ;
+; |traffic|Add0~9            ; |traffic|Add0~9            ; out0             ;
+; |traffic|Add0~10           ; |traffic|Add0~10           ; out0             ;
+; |traffic|Add0~11           ; |traffic|Add0~11           ; out0             ;
+; |traffic|Add0~12           ; |traffic|Add0~12           ; out0             ;
+; |traffic|Add1~0            ; |traffic|Add1~0            ; out0             ;
+; |traffic|Add1~1            ; |traffic|Add1~1            ; out0             ;
+; |traffic|Add1~2            ; |traffic|Add1~2            ; out0             ;
+; |traffic|Add1~3            ; |traffic|Add1~3            ; out0             ;
+; |traffic|Add1~4            ; |traffic|Add1~4            ; out0             ;
+; |traffic|Add1~5            ; |traffic|Add1~5            ; out0             ;
+; |traffic|Add1~6            ; |traffic|Add1~6            ; out0             ;
+; |traffic|Add1~7            ; |traffic|Add1~7            ; out0             ;
+; |traffic|Add2~0            ; |traffic|Add2~0            ; out0             ;
+; |traffic|Add2~1            ; |traffic|Add2~1            ; out0             ;
+; |traffic|Add2~2            ; |traffic|Add2~2            ; out0             ;
+; |traffic|Add2~3            ; |traffic|Add2~3            ; out0             ;
+; |traffic|Add2~4            ; |traffic|Add2~4            ; out0             ;
+; |traffic|Add2~5            ; |traffic|Add2~5            ; out0             ;
+; |traffic|Add2~6            ; |traffic|Add2~6            ; out0             ;
+; |traffic|Add2~7            ; |traffic|Add2~7            ; out0             ;
+; |traffic|Add2~8            ; |traffic|Add2~8            ; out0             ;
+; |traffic|Add2~9            ; |traffic|Add2~9            ; out0             ;
+; |traffic|Add2~10           ; |traffic|Add2~10           ; out0             ;
+; |traffic|Add3~0            ; |traffic|Add3~0            ; out0             ;
+; |traffic|Add3~1            ; |traffic|Add3~1            ; out0             ;
+; |traffic|Add3~2            ; |traffic|Add3~2            ; out0             ;
+; |traffic|Add3~3            ; |traffic|Add3~3            ; out0             ;
+; |traffic|Add3~4            ; |traffic|Add3~4            ; out0             ;
+; |traffic|Add3~5            ; |traffic|Add3~5            ; out0             ;
+; |traffic|Add3~6            ; |traffic|Add3~6            ; out0             ;
+; |traffic|Add3~7            ; |traffic|Add3~7            ; out0             ;
+; |traffic|Add3~8            ; |traffic|Add3~8            ; out0             ;
+; |traffic|Add3~9            ; |traffic|Add3~9            ; out0             ;
+; |traffic|Add4~0            ; |traffic|Add4~0            ; out0             ;
+; |traffic|Add5~0            ; |traffic|Add5~0            ; out0             ;
+; |traffic|Add5~1            ; |traffic|Add5~1            ; out0             ;
+; |traffic|Add5~2            ; |traffic|Add5~2            ; out0             ;
+; |traffic|Add5~3            ; |traffic|Add5~3            ; out0             ;
+; |traffic|Add5~4            ; |traffic|Add5~4            ; out0             ;
+; |traffic|Add5~5            ; |traffic|Add5~5            ; out0             ;
+; |traffic|Add5~6            ; |traffic|Add5~6            ; out0             ;
+; |traffic|Add5~7            ; |traffic|Add5~7            ; out0             ;
+; |traffic|Add6~0            ; |traffic|Add6~0            ; out0             ;
+; |traffic|Add6~1            ; |traffic|Add6~1            ; out0             ;
+; |traffic|Add6~2            ; |traffic|Add6~2            ; out0             ;
+; |traffic|Add6~3            ; |traffic|Add6~3            ; out0             ;
+; |traffic|Add6~4            ; |traffic|Add6~4            ; out0             ;
+; |traffic|Add6~5            ; |traffic|Add6~5            ; out0             ;
+; |traffic|Add6~6            ; |traffic|Add6~6            ; out0             ;
+; |traffic|Add6~7            ; |traffic|Add6~7            ; out0             ;
+; |traffic|Add6~8            ; |traffic|Add6~8            ; out0             ;
+; |traffic|Add6~9            ; |traffic|Add6~9            ; out0             ;
+; |traffic|Add6~10           ; |traffic|Add6~10           ; out0             ;
+; |traffic|Add6~11           ; |traffic|Add6~11           ; out0             ;
+; |traffic|Add7~0            ; |traffic|Add7~0            ; out0             ;
+; |traffic|Add7~1            ; |traffic|Add7~1            ; out0             ;
+; |traffic|Add7~2            ; |traffic|Add7~2            ; out0             ;
+; |traffic|Add7~3            ; |traffic|Add7~3            ; out0             ;
+; |traffic|Add7~4            ; |traffic|Add7~4            ; out0             ;
+; |traffic|Add7~5            ; |traffic|Add7~5            ; out0             ;
+; |traffic|Add7~6            ; |traffic|Add7~6            ; out0             ;
+; |traffic|Add7~7            ; |traffic|Add7~7            ; out0             ;
+; |traffic|Add7~8            ; |traffic|Add7~8            ; out0             ;
+; |traffic|Add7~9            ; |traffic|Add7~9            ; out0             ;
+; |traffic|Add8~0            ; |traffic|Add8~0            ; out0             ;
+; |traffic|Add8~1            ; |traffic|Add8~1            ; out0             ;
+; |traffic|Add8~2            ; |traffic|Add8~2            ; out0             ;
+; |traffic|Add8~3            ; |traffic|Add8~3            ; out0             ;
+; |traffic|Add8~4            ; |traffic|Add8~4            ; out0             ;
+; |traffic|Add8~5            ; |traffic|Add8~5            ; out0             ;
+; |traffic|Add8~6            ; |traffic|Add8~6            ; out0             ;
+; |traffic|Add8~7            ; |traffic|Add8~7            ; out0             ;
+; |traffic|Add8~8            ; |traffic|Add8~8            ; out0             ;
+; |traffic|Add8~9            ; |traffic|Add8~9            ; out0             ;
+; |traffic|Add8~10           ; |traffic|Add8~10           ; out0             ;
+; |traffic|Add8~11           ; |traffic|Add8~11           ; out0             ;
+; |traffic|Add9~0            ; |traffic|Add9~0            ; out0             ;
+; |traffic|Add9~1            ; |traffic|Add9~1            ; out0             ;
+; |traffic|Add9~2            ; |traffic|Add9~2            ; out0             ;
+; |traffic|Add9~3            ; |traffic|Add9~3            ; out0             ;
+; |traffic|Add9~4            ; |traffic|Add9~4            ; out0             ;
+; |traffic|Add9~5            ; |traffic|Add9~5            ; out0             ;
+; |traffic|Add9~6            ; |traffic|Add9~6            ; out0             ;
+; |traffic|Add9~7            ; |traffic|Add9~7            ; out0             ;
+; |traffic|Add10~0           ; |traffic|Add10~0           ; out0             ;
+; |traffic|Add10~1           ; |traffic|Add10~1           ; out0             ;
+; |traffic|Add10~2           ; |traffic|Add10~2           ; out0             ;
+; |traffic|Add10~3           ; |traffic|Add10~3           ; out0             ;
+; |traffic|Add10~4           ; |traffic|Add10~4           ; out0             ;
+; |traffic|Add10~5           ; |traffic|Add10~5           ; out0             ;
+; |traffic|Add10~6           ; |traffic|Add10~6           ; out0             ;
+; |traffic|Add10~7           ; |traffic|Add10~7           ; out0             ;
+; |traffic|Add10~8           ; |traffic|Add10~8           ; out0             ;
+; |traffic|Add10~9           ; |traffic|Add10~9           ; out0             ;
+; |traffic|Add10~10          ; |traffic|Add10~10          ; out0             ;
+; |traffic|Add10~11          ; |traffic|Add10~11          ; out0             ;
+; |traffic|Add11~0           ; |traffic|Add11~0           ; out0             ;
+; |traffic|Add11~1           ; |traffic|Add11~1           ; out0             ;
+; |traffic|Add11~2           ; |traffic|Add11~2           ; out0             ;
+; |traffic|Add11~3           ; |traffic|Add11~3           ; out0             ;
+; |traffic|Add11~4           ; |traffic|Add11~4           ; out0             ;
+; |traffic|Add11~5           ; |traffic|Add11~5           ; out0             ;
+; |traffic|Add11~6           ; |traffic|Add11~6           ; out0             ;
+; |traffic|Add11~7           ; |traffic|Add11~7           ; out0             ;
+; |traffic|Add11~8           ; |traffic|Add11~8           ; out0             ;
+; |traffic|Add11~9           ; |traffic|Add11~9           ; out0             ;
+; |traffic|Add12~0           ; |traffic|Add12~0           ; out0             ;
+; |traffic|Add12~1           ; |traffic|Add12~1           ; out0             ;
+; |traffic|Add12~2           ; |traffic|Add12~2           ; out0             ;
+; |traffic|Add12~3           ; |traffic|Add12~3           ; out0             ;
+; |traffic|Add12~4           ; |traffic|Add12~4           ; out0             ;
+; |traffic|Add12~5           ; |traffic|Add12~5           ; out0             ;
+; |traffic|Add12~6           ; |traffic|Add12~6           ; out0             ;
+; |traffic|Add12~7           ; |traffic|Add12~7           ; out0             ;
+; |traffic|Add12~8           ; |traffic|Add12~8           ; out0             ;
+; |traffic|Add12~9           ; |traffic|Add12~9           ; out0             ;
+; |traffic|Add12~10          ; |traffic|Add12~10          ; out0             ;
+; |traffic|Add12~11          ; |traffic|Add12~11          ; out0             ;
+; |traffic|Equal0~0          ; |traffic|Equal0~0          ; out0             ;
+; |traffic|Equal1~0          ; |traffic|Equal1~0          ; out0             ;
+; |traffic|Equal2~0          ; |traffic|Equal2~0          ; out0             ;
+; |traffic|Equal3~0          ; |traffic|Equal3~0          ; out0             ;
++----------------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |traffic|COUNT68~0    ; |traffic|COUNT68~0    ; out              ;
+; |traffic|COUNT68[7]   ; |traffic|COUNT68[7]   ; regout           ;
+; |traffic|RST          ; |traffic|RST          ; out              ;
+; |traffic|current_s~1  ; |traffic|current_s~1  ; out0             ;
+; |traffic|current_s~9  ; |traffic|current_s~9  ; out0             ;
+; |traffic|Selector0~3  ; |traffic|Selector0~3  ; out0             ;
+; |traffic|Selector0~4  ; |traffic|Selector0~4  ; out0             ;
+; |traffic|Selector1~2  ; |traffic|Selector1~2  ; out0             ;
+; |traffic|Selector1~3  ; |traffic|Selector1~3  ; out0             ;
+; |traffic|Selector2~2  ; |traffic|Selector2~2  ; out0             ;
+; |traffic|Selector2~3  ; |traffic|Selector2~3  ; out0             ;
+; |traffic|Selector3~1  ; |traffic|Selector3~1  ; out0             ;
+; |traffic|Selector3~3  ; |traffic|Selector3~3  ; out0             ;
+; |traffic|Selector4~1  ; |traffic|Selector4~1  ; out0             ;
+; |traffic|Selector4~3  ; |traffic|Selector4~3  ; out0             ;
+; |traffic|Selector5~1  ; |traffic|Selector5~1  ; out0             ;
+; |traffic|Selector6~2  ; |traffic|Selector6~2  ; out0             ;
+; |traffic|Selector6~3  ; |traffic|Selector6~3  ; out0             ;
+; |traffic|Selector7~3  ; |traffic|Selector7~3  ; out0             ;
+; |traffic|Selector8~3  ; |traffic|Selector8~3  ; out0             ;
+; |traffic|Selector9~1  ; |traffic|Selector9~1  ; out0             ;
+; |traffic|Selector9~3  ; |traffic|Selector9~3  ; out0             ;
+; |traffic|Selector10~1 ; |traffic|Selector10~1 ; out0             ;
+; |traffic|Selector10~3 ; |traffic|Selector10~3 ; out0             ;
+; |traffic|Selector11~1 ; |traffic|Selector11~1 ; out0             ;
+; |traffic|LessThan1~6  ; |traffic|LessThan1~6  ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------+
+; Missing 0-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |traffic|COUNT68~0    ; |traffic|COUNT68~0    ; out              ;
+; |traffic|COUNT68[7]   ; |traffic|COUNT68[7]   ; regout           ;
+; |traffic|RST          ; |traffic|RST          ; out              ;
+; |traffic|SWI          ; |traffic|SWI          ; out              ;
+; |traffic|current_s~1  ; |traffic|current_s~1  ; out0             ;
+; |traffic|current_s~9  ; |traffic|current_s~9  ; out0             ;
+; |traffic|Selector0~3  ; |traffic|Selector0~3  ; out0             ;
+; |traffic|Selector0~4  ; |traffic|Selector0~4  ; out0             ;
+; |traffic|Selector1~2  ; |traffic|Selector1~2  ; out0             ;
+; |traffic|Selector1~3  ; |traffic|Selector1~3  ; out0             ;
+; |traffic|Selector2~2  ; |traffic|Selector2~2  ; out0             ;
+; |traffic|Selector2~3  ; |traffic|Selector2~3  ; out0             ;
+; |traffic|Selector3~1  ; |traffic|Selector3~1  ; out0             ;
+; |traffic|Selector3~3  ; |traffic|Selector3~3  ; out0             ;
+; |traffic|Selector4~1  ; |traffic|Selector4~1  ; out0             ;
+; |traffic|Selector4~3  ; |traffic|Selector4~3  ; out0             ;
+; |traffic|Selector5~1  ; |traffic|Selector5~1  ; out0             ;
+; |traffic|Selector6~2  ; |traffic|Selector6~2  ; out0             ;
+; |traffic|Selector6~3  ; |traffic|Selector6~3  ; out0             ;
+; |traffic|Selector7~3  ; |traffic|Selector7~3  ; out0             ;
+; |traffic|Selector8~3  ; |traffic|Selector8~3  ; out0             ;
+; |traffic|Selector9~1  ; |traffic|Selector9~1  ; out0             ;
+; |traffic|Selector9~3  ; |traffic|Selector9~3  ; out0             ;
+; |traffic|Selector10~1 ; |traffic|Selector10~1 ; out0             ;
+; |traffic|Selector10~3 ; |traffic|Selector10~3 ; out0             ;
+; |traffic|Selector11~1 ; |traffic|Selector11~1 ; out0             ;
+; |traffic|LessThan1~6  ; |traffic|LessThan1~6  ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Sun Aug 28 14:27:16 2022
+Info: Command: quartus_sim --simulation_results_format=VWF traffic -c traffic
+Info (324025): Using vector source file "C:/Users/Administrator/Desktop/trd/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      93.66 %
+Info (328052): Number of transitions in simulation is 83060
+Info (324045): Vector file traffic.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4448 megabytes
+    Info: Processing ended: Sun Aug 28 14:27:16 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

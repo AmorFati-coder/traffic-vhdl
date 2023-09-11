@@ -1,0 +1,117 @@
+library IEEE;--库文件
+USE IEEE.std_logic_1164.all;
+USE IEEE.STD_LOGIC_UNSIGNED.all;
+
+ENTITY traffic IS
+	PORT(CLK,RST,SWI: IN STD_LOGIC;
+		LED: OUT STD_LOGIC_VECTOR(5 DOWNTO  0);	--红绿灯
+		WideSEGH: OUT STD_LOGIC_VECTOR(3 DOWNTO  0); --东西方向数码管高位
+		WideSEGL: OUT STD_LOGIC_VECTOR(3 DOWNTO  0); --东西方向数码管低位
+		NSEGH: OUT STD_LOGIC_VECTOR(3 DOWNTO  0); --南北方向数码管高位
+		NSEGL: OUT STD_LOGIC_VECTOR(3 DOWNTO  0)); --南北方向数码管低位
+END ENTITY traffic;
+
+
+ARCHITECTURE bhv OF traffic IS
+    TYPE state IS(S0,S1,S2,S3);
+    SIGNAL current_s,next_s:state;
+    SIGNAL COUNT68:STD_LOGIC_VECTOR(7 DOWNTO  0);
+	 --SIGNAL grenn_time:integer:=39;
+	 --SIGNAL red_time:integer:=43;
+      BEGIN
+COUNT: PROCESS(RST,CLK)
+		BEGIN
+			IF RST= '1' THEN
+				COUNT68<="00000000";
+			ELSIF CLK'EVENT AND CLK='1' THEN
+				IF COUNT68<"01000011" THEN 
+					COUNT68<=COUNT68+1;
+				ELSE 
+					COUNT68<="00000000"; 
+				END IF;
+			END IF;
+		END PROCESS;
+
+
+REG: PROCESS (RST,CLK)           
+	BEGIN
+		IF RST= '1' THEN   
+			current_s <= s0;      
+		ELSIF clk='1' AND clk'EVENT THEN   
+			current_s <= next_s; 
+		END IF;
+	END PROCESS;     
+
+COM:PROCESS(current_s, COUNT68, SWI, CLK)       
+VARIABLE WESEG,NSSEG:STD_LOGIC_VECTOR(7 DOWNTO  0);
+	BEGIN
+	IF SWI='0' THEN 
+		CASE current_s IS                     
+			WHEN s0 => LED<= "010100";
+				WESEG:=39-COUNT68;
+				NSSEG:=43-COUNT68; 
+				IF COUNT68 ="00100111" THEN
+					next_s<=s1;                    
+				ELSE 
+					next_s<=s0;    
+				END IF;
+			WHEN s1 => LED <= "001100";
+				WESEG:=43-COUNT68;
+				NSSEG:=43-COUNT68; 
+				IF COUNT68 = "00101011" THEN  --B00101011=43
+					next_s<=s2;    
+				ELSE
+					LED<="000100";
+					next_s<=s1;   
+				END IF;
+			WHEN s2 => LED <= "100010";
+				WESEG:=67-COUNT68;
+				NSSEG:=63-COUNT68; 
+				IF COUNT68 ="00111111" THEN  --B00111111=64
+					next_s <= s3;
+				ELSE  
+					next_s <= s2; 
+				END IF;
+			WHEN s3 => LED <= "100001";
+				WESEG:=67-COUNT68;
+				NSSEG:=67-COUNT68; 
+				IF COUNT68 ="01000011" THEN --B01000011=67 
+					next_s<= s0; 
+				ELSE
+					LED<="100000";
+					next_s <= s3;   
+				END IF;
+			WHEN OTHERS=> LED <="100100"; 
+    END case;
+	 
+	
+	IF WESEG>39 THEN 
+		WESEG:=WESEG+24;
+	ELSIF WESEG>29 THEN 
+		WESEG:=WESEG+18;
+	ELSIF WESEG>19 THEN
+		WESEG:=WESEG+12;
+	ELSIF WESEG>9 THEN
+		WESEG:=WESEG+6;
+	ELSE NULL;
+	END IF;
+	
+	
+	IF NSSEG>39 THEN
+		NSSEG:=NSSEG+24;
+	ELSIF NSSEG>29 THEN 
+		NSSEG:=NSSEG+18;
+	ELSIF NSSEG>19 THEN 
+		NSSEG:=NSSEG+12;
+	ELSIF NSSEG>9 THEN 
+		NSSEG:=NSSEG+6;
+	ELSE NULL;
+	END IF;
+	WideSEGH<=WESEG(7 DOWNTO 4);
+	WideSEGL<=WESEG(3 DOWNTO 0);
+	NSEGH<=NSSEG(7 DOWNTO 4);
+	NSEGL<=NSSEG(3 DOWNTO 0);
+	
+END IF;
+END PROCESS;  
+END ARCHITECTURE bhv;
